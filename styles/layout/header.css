@@ -1,0 +1,117 @@
+header {
+    background-color: var(--dump-dark);
+    background-image: url("/assets/images/header/header.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 375px;
+}
+
+.header-typewriter-wrapper {
+    position: absolute;
+    top: 50%;
+    color: var(--dump-white);
+    padding: 2em;
+    z-index: 0;
+}
+
+.header-typewriter-wrapper p {
+    font-size: 16px;
+    font-weight: lighter;
+
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+.header-typewriter-wrapper .header-typewriter-content {
+    font-size: 40px;
+}
+
+.header-typewriter-wrapper .header-typewriter-content ol {
+    list-style: none;
+
+    height: 48px;
+    line-height: 48px;
+
+    padding: 0;
+    margin: 0;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: flex-start;
+}
+
+.header-typewriter-wrapper .header-typewriter-content ol li {
+    animation: slide calc(5*5*2s) steps(5) infinite;
+}
+
+.header-typewriter-wrapper .header-typewriter-content ol li span {
+    font-weight: 600;
+    -webkit-text-fill-color: transparent;
+    background: var(--dump-cyan);
+    -webkit-background-clip: text;
+
+    white-space: nowrap;
+
+    border-right: 0.4rem solid var(--dump-cyan);
+    
+    box-sizing: border-box;
+    display: inline-block;
+    width: 0%;
+
+    padding: 0;
+    margin: 0;    
+}
+
+.header-typewriter-content ol li:nth-child(1) span {
+    animation: cursor 1s step-end infinite, typing 5s steps(20) infinite alternate;
+}
+
+.header-typewriter-content ol li:nth-child(2) span {
+    animation: cursor 1s step-end infinite, typing 5s steps(18) infinite alternate;
+}
+
+.header-typewriter-content ol li:nth-child(3) span {
+    animation: cursor 1s step-end infinite, typing 5s steps(24) infinite alternate;
+}
+
+.header-typewriter-content ol li:nth-child(4) span {
+    animation: cursor 1s step-end infinite, typing 5s steps(22) infinite alternate;
+}
+
+.header-typewriter-content ol li:nth-child(5) span {
+    animation: cursor 1s step-end infinite, typing 5s steps(20) infinite alternate;
+}
+
+@keyframes slide {
+    100% {
+        transform: translateY(-500%);
+    }
+}
+
+@keyframes cursor {
+    50% { border-color: var(--dump-dark); }
+}
+
+@keyframes typing {
+    50% {
+        width: 0%;
+    }
+
+    50%, 100% {
+        width: 101%;
+    }
+}
+
+.header-signin-button {
+    background-color: var(--dump-cyan);
+    color: var(--dump-dark);
+    padding: 12px 32px 12px 32px;
+    border-radius: 15px;
+    border-color: transparent;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 24px;
+}

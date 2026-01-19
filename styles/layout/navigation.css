@@ -1,4 +1,5 @@
 .navigation-bar-container {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -6,6 +7,8 @@
 
     width: 100%;
     height: fit-content;
+    z-index: 1;
+    background-color: transparent;
 }
 
 #hamburger-menu-checkbox {
@@ -48,6 +51,9 @@
 }
 
 .navigation-items-container {
+    position: absolute;
+    top: 80px;
+    left: 0;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -81,4 +87,12 @@
 
 #hamburger-menu-checkbox:checked ~ .navigation-items-container {
     transform: translateY(0);
+}
+
+body:has(#hamburger-menu-checkbox:checked) {
+    overflow: hidden;
+}
+
+header:has(#hamburger-menu-checkbox:checked) {
+    background-image: none;
 }
