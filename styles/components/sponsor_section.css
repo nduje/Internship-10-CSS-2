@@ -1,0 +1,40 @@
+.sponsors{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 10vw 3.125rem;
+}
+
+.sponsors__heading{
+    font-size: var(--header-font-size-mobile);
+    color: var(--dump-white);
+}
+
+.sponsors__item{
+    display: flex;
+    flex-direction: column;
+}
+
+.sponsors__item{
+    display: flex;
+    justify-content: center;
+    margin-top: 3.5rem;
+}
+
+.sponsors__image{
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+}
+
+.sponsors__category{
+    display: inline-block;
+    padding: 3px 1rem;
+    margin-top: 25px;
+    font-size: 12px;
+    font-weight: 800;
+    line-height: 18px;
+    text-align: center;
+    border-radius: .5rem;
+    background-color: #30cec2;
+}
