@@ -74,24 +74,102 @@
     height: 140px;   
     margin: auto;
     background-color: white;
+    mask-repeat: no-repeat;
+    mask-position: center;
+    mask-size: contain;
 }
 
 
-.ericsson-link .sponsor-logo{ 
-    mask: url("/assets/images/sponsor_logos/ericsson-logo.svg") no-repeat center;
-    mask-size: contain;
+.sponsor-logo.ericsson{ 
+    mask-image: url("/assets/images/sponsor_logos/ericsson-logo.svg");
     transform: scale(1.3) translateX(15%);
 }
 
-.engine-link .sponsor-logo{ 
-    mask: url("/assets/images/sponsor_logos/extension-engine-logo.png") no-repeat center;
-    mask-size: contain;
+.sponsor-logo.engine{ 
+    mask-image: url("/assets/images/sponsor_logos/extension-engine-logo.png");
 }
 
-.fortuna-link .sponsor-logo{ 
-    mask: url("/assets/images/sponsor_logos/fortuna-logo.png") no-repeat center;
-    mask-size: contain;
+.sponsor-logo.fortuna{ 
+    mask-image: url("/assets/images/sponsor_logos/fortuna-logo.png");
     transform: scale(1.05);
+}
+
+.silver-sponsor-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: clamp(0rem, 2vw, 1.5rem);   
+    padding: 0 clamp(2rem, 5vw, 4rem);   
+}
+
+.other-sponsors-main-title{
+    margin: 7.5rem 0 5.625rem;
+    text-align: center;
+    font-size: var(--header-font-size-mobile);
+    color: var(--dump-cyan);
+}
+
+.silver-sponsor-container .sponsor-logo-link{
+    animation: fadeInOut 10s infinite;
+}
+
+.sponsor-logo.blank{
+    mask-image: url("/assets/images/sponsor_logos/blank-logo.png");
+}
+
+.sponsor-logo.emovies{
+    mask-image: url("/assets/images/sponsor_logos/emovies-logo.png");
+}
+
+.sponsor-logo.arsfutura{
+    mask-image: url("/assets/images/sponsor_logos/arsfutura-logo.svg");
+}
+
+.sponsor-logo.bdr{
+    mask-image: url("/assets/images/sponsor_logos/bdr-logo.svg");
+    transform: scale(0.6);
+}
+
+.sponsor-logo.travelsoft{
+    mask-image: url("/assets/images/sponsor_logos/travelsoft-logo.svg");
+}
+
+.sponsor-logo.infobip{
+    mask-image: url("/assets/images/sponsor_logos/infobip-logo.svg");
+    transform: scale(0.8);
+}
+
+.sponsor-logo.hrc{
+    mask-image: url("/assets/images/sponsor_logos/HRC-logo.svg");
+}
+
+.sponsor-logo.profico{
+    mask-image: url("/assets/images/sponsor_logos/profico-logo.svg");
+    transform: scale(0.8);    
+}
+
+.sponsor-logo.hrprodigy{
+    mask-image: url("/assets/images/sponsor_logos/hrprodigy-logo.svg");
+}
+
+.sponsor-logo.typeqast{
+    mask-image: url("/assets/images/sponsor_logos/typeqast-logo.svg");
+    transform: translate(5%,3%);
+}
+
+.silver-sponsor-container .sponsor-logo-link:nth-child(1){animation-delay: -0s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(2){animation-delay: -2s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(3){animation-delay: -5s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(4){animation-delay: -4s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(5){animation-delay: -3s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(6){animation-delay: -9s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(7){animation-delay: -2s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(8){animation-delay: -5s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(9){animation-delay: -8s;}
+.silver-sponsor-container .sponsor-logo-link:nth-child(10){animation-delay: -0s;}
+
+.last-column-container{
+    display: contents;
 }
 
 .link--animated-underline{
@@ -130,6 +208,7 @@
     }
     
     .sponsor-main-title{
+        margin-bottom: 3rem;
         font-size: 3rem;
     }
     .sponsor-item{
@@ -138,19 +217,21 @@
     }
 
     .sponsor-item>a:first-child{
-        width: 75%;
-        max-width: 600px; 
-        min-width: 350px;  
+        width: clamp(350px, 50%, 650px);
     }
 
     .sponsor-info{
-        width: 70%;
+        width: clamp(200px, 50%, 470px);
     }
 
     .sponsor-info__category{
         padding: 7px 1rem;
         margin-bottom: 1rem;
         font-size: 14px;
+    }
+
+    .sponsor-info__name{
+        font-size: 2rem;
     }
 
     .sponsor-info__description{
@@ -160,6 +241,37 @@
     .sponsor-logo-link.ericsson-link,
     .sponsor-logo-link.engine-link{
         margin-bottom: 4.5rem;
+    }
+
+    .sponsor-logo{
+        margin: 0;
+    }
+
+    .ericsson-link .sponsor-logo{
+        transform: scale(1.3) translateX(13%);
+    }
+
+    .silver-sponsor-container {
+        grid-template-columns: repeat(5, 1fr);
+        grid-auto-rows: auto;            
+        justify-items: center;
+    }
 }
 
+@media (min-width: 901px) and (max-width: 1100px) {
+
+    .silver-sponsor-container {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+
+    .last-column-container{
+        display: flex;
+        justify-content: center;
+        grid-column: 1 / -1;
+    }
+}
+
+@keyframes fadeInOut{
+    0%, 20%, 100% {opacity:0;}
+    10%, 15% {opacity: 1};
 }
