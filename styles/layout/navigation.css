@@ -30,6 +30,11 @@
 .dump-logo-link {
     width: fit-content;
     height: fit-content;
+    background-color: transparent;
+}
+
+.dump-logo {
+    background-color: transparent;
 }
 
 .hamburger-menu {
@@ -39,6 +44,7 @@
     width: 32px;
     height: 32px;
     color: var(--dump-white);
+    background-color: transparent;
 }
 
 .hamburger-menu::before {
@@ -93,6 +99,6 @@ body:has(#hamburger-menu-checkbox:checked) {
     overflow: hidden;
 }
 
-header:has(#hamburger-menu-checkbox:checked) {
-    background-image: none;
+header:has(#hamburger-menu-checkbox:checked)::before {
+    opacity: 0;
 }
