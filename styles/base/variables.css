@@ -8,4 +8,6 @@
 
     --header-font-size-mobile: 2.5rem;
     --sponsor-name-font-size: 1.5rem;
+
+    --paragraph-transparent: rgba(255,255,255,0.7);
 }
