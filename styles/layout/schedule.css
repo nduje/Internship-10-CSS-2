@@ -1,0 +1,257 @@
+.schedule-container {
+    margin: 4em 0 4em 0;
+    color: var(--dump-white);
+    display: flex;
+    flex-direction: column;
+    gap: 3em;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.schedule-container-title {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 800;
+}
+
+.days-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+}
+
+.day-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+
+    padding: 2em 1.5em 2em 1.5em;
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: var(--dump-white);
+    
+    color: var(--dump-white);
+    background-color: var(--dump-dark);
+}
+
+.day-container:hover, .day-container.selected, .day-container.selected:hover {
+    color: var(--dump-cyan);
+    background-color: var(--dump-dark);
+    border-color: var(--dump-cyan);
+}
+
+.day-container h2 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 800;
+    background-color: transparent;
+}
+
+.day-container p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    background-color: transparent;
+}
+
+.conference-tag-filter-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    overflow-x: auto;
+    overflow-y: hidden;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    width: 100%;
+    padding-left: 1em;
+    gap: 1em;
+}
+
+.conference-tag-filter {
+    flex: 0 0 auto;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: var(--dump-white);
+    
+    border-width: 2px;
+    border-style: solid;
+    border-radius: 20px;
+    border-color: var(--dump-white);
+
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+.conference-tag-filter:hover, .conference-tag-filter.selected, .conference-tag-filter.selected:hover {
+    color: var(--dump-cyan);
+    border-color: var(--dump-cyan);
+}
+
+.conference-content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2em;
+
+    padding: 1em;
+}
+
+.conference-content-box {
+    background-color: rgba(255, 255, 255, 5%);
+    border-radius: 20px;
+    padding: 2em;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+
+    overflow: hidden;
+
+    opacity: 0;
+    transform: translateY(100%);
+
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.conference-content-box * {
+    background-color: transparent;
+    max-width: 80%;
+}
+
+.timetable-and-tag-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 0.5em;
+    width: 100%;
+}
+
+.content-timetable, .content-description {
+    color: var(--dump-white);
+    font-size: 14px;
+    line-height: 22px;
+    opacity: 80%;
+}
+
+.content-tag {
+    border-radius: 6px;
+    background-color: var(--dump-cyan);
+    color: var(--dump-dark);
+    font-size: 10px;
+    font-weight: 800;
+    padding: 0.25em 0.5em 0.25em 0.5em;
+}
+
+.title-and-toggle-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    max-width: 100%;
+}
+
+.content-title {
+    color: var(--dump-white);
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+    margin: 0.25em 0 1em 0;
+    width: 80%;
+}
+
+.content-toggle::after {
+  font-family: var(--dump-icon-font);
+  content: "expand_more";
+  font-size: 24px;
+}
+
+.content-toggle.open::after {
+    content: "expand_less"
+}
+
+.content-summary {
+    color: var(--dump-white);
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 80%;
+    margin-top: 1em;
+    max-width: 100%;
+}
+
+.conference-content-box.blank {
+    background-color: transparent;
+}
+
+.conference-content-box.blank .content-title {
+    margin: 0.25em 0 0 0;
+}
+
+.lecturer-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    column-gap: 1em;
+    row-gap: 0.25em;
+    align-items: center;
+    max-width: 100%;
+    margin-top: 3em;
+}
+
+.lecturer-avatar {
+    grid-row: 1 / span 2;
+    grid-column: 1;
+    width: 48px;
+    aspect-ratio: 1 / 1;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.lecturer-name {
+    grid-column: 2;
+    grid-row: 1;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 800;
+}
+
+.lecturer-job {
+    grid-column: 2;
+    grid-row: 2;
+
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+}
+
+.lecturer-logo {
+    grid-column: 2;
+    grid-row: 3;
+
+    width: 97px;
+    height: auto;
+}
