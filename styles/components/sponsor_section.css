@@ -35,7 +35,7 @@
 
 .sponsor-info__category{
     width: fit-content;
-    padding: 3px 10px 2px 10px;
+    padding: 3px 10px 1.5px 10px;
     margin-top: 25px;
     font-size: 12px;
     font-weight: 800;
@@ -231,7 +231,7 @@
     }
 
     .sponsor-info__category{
-        padding: 7px 1rem;
+        padding: 7px 1rem 3.5px;
         margin-bottom: 1rem;
         font-size: 14px;
     }
