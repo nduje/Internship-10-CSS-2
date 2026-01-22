@@ -78,6 +78,7 @@
 
 .conference-program-container {
     gap: 2em;
+    overflow: hidden;
 }
 
 .conference-program {
