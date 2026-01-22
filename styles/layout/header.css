@@ -29,6 +29,7 @@ header::before {
     color: var(--dump-white);
     padding: 1em;
     z-index: 0;
+    opacity: 90%;
 }
 
 .header-typewriter-container p {
@@ -37,6 +38,8 @@ header::before {
 
     margin-top: 2em;
     margin-bottom: 1.5em;
+    
+    opacity: 80%;
 }
 
 .header-typewriter-container .header-typewriter-content {
@@ -101,6 +104,13 @@ header::before {
     animation: cursor 1s step-end infinite, typing 5s steps(20) infinite alternate;
 }
 
+.header-buttons-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 0.5em;
+}
+
 @keyframes slide {
     100% {
         transform: translateY(-500%);
@@ -121,13 +131,148 @@ header::before {
     }
 }
 
-.header-signin-button {
-    background-color: var(--dump-cyan);
-    color: var(--dump-dark);
+.header-button {
+    cursor: pointer;
     padding: 12px 32px 12px 32px;
     border-radius: 15px;
-    border-color: transparent;
     font-weight: bold;
     font-size: 16px;
     line-height: 24px;
+}
+
+.header-signin-button {
+    background-color: var(--dump-cyan);
+    color: var(--dump-dark);
+    border-color: transparent;
+}
+
+.header-join-button {
+    display: none;
+    background-color: transparent;
+    color: var(--dump-white);
+    border-color: var(--dump-white);
+}
+
+.live-now-container {
+    display: none;
+}
+
+@media (min-width: 1440px) {
+    header::before {
+        height: 100%;
+        background-image: 
+            linear-gradient(to bottom, #0A181BAA 0%, #0A181BFF 100%),
+            url("/assets/images/header/6ded6dd0ba4a7a29342c3325bfd2af9a7c099506.png");
+    }
+
+    .header-typewriter-container {
+        position: absolute;
+        top: 20%;
+        padding: 2rem 10rem 2rem 10rem;
+    }
+
+    .header-typewriter-container, .header-typewriter-container * {
+        background-color: transparent;
+    }
+
+    .header-typewriter-content {
+        font-size: 64px;
+    }
+
+    .header-typewriter-content ol {
+        height: 80px;
+        line-height: 80px;
+    }
+
+    .header-typewriter-container p {
+        font-size: 20px;
+        line-height: 30px;
+
+        margin-top: 1em;
+        margin-bottom: 0.75em;
+    }
+
+    .header-signin-button {
+        background-color: var(--dump-cyan);
+    }
+
+    .header-join-button {
+        display: flex;
+    }
+
+    .header-live-now-container {
+        display: grid;
+        grid-template-columns: auto auto;
+        grid-template-rows: auto auto;
+        gap: 0 2rem;
+        margin-top: 4em;
+        padding: 1rem 2rem;
+        border-radius: 27px;
+
+        background-color: rgba(255, 255, 255, 0.05)
+    }
+
+    .live-now-lecturer-avatar {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+
+        margin: auto;
+        width: 56px;
+        aspect-ratio: 1 / 1;
+        border-radius: 40px;
+    }
+
+    .live-now-title-container {
+        grid-column: 2;
+        grid-row: 1;
+
+        display: flex;
+        flex-direction: row;
+        gap: 1rem;
+        justify-content: flex-start;
+        align-items: center;
+        margin: 0;
+
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 800;
+    }
+
+    .live-now-signature {
+        grid-column: 2;
+        grid-row: 2;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+
+        font-size: 16px;
+        line-height: 26px;
+        font-weight: 400;
+
+        margin: 0;
+    }
+
+    .live-now-signature span {
+        font-weight: 600;
+    }
+
+    .watch-now-button {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+
+        cursor: pointer;
+        padding: 12px 32px 12px 32px;
+        margin: auto;
+        height: fit-content;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+
+        background-color: transparent;
+        color: var(--dump-white);
+        border-color: var(--dump-white);
+    }
 }

@@ -112,11 +112,12 @@ header:has(#hamburger-menu-checkbox:checked)::before {
 @media (min-width: 1440px) {
     .navigation-bar-container {
         flex-direction: row;
-        padding: 1em 10em 1em 10em;
+        padding: 2rem 10rem 2rem 10rem;
     }
 
     .navigation-bar {
         height: 40px;
+        padding: 0;
     }
     
     .dump-logo {
@@ -142,6 +143,7 @@ header:has(#hamburger-menu-checkbox:checked)::before {
         width: 100%;
         height: auto;
         transform: translateY(0);
+        transition: none;
         gap: 4em;
         background-color: transparent;
         overflow: visible;
