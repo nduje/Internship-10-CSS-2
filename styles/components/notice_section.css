@@ -19,10 +19,11 @@
 .job-list{
     display: flex;
     gap: 40px;
-    padding: 0 1rem;
+    padding: 2rem 1rem;
     margin-bottom: 6.25rem;
     overflow-x: auto;
     transition: transform 0.5s ease;
+    scrollbar-gutter: stable both-edges;
 }
 
 .job{
@@ -133,11 +134,11 @@
 }
 
 .job{
-    transition: transform 0.3s ease;
+    transition: transform 0.2s ease;
 }
 
 .job:hover{
-    transform: scale(1.05);
+    transform: scale(1.03);
 }
 
 
@@ -159,7 +160,7 @@
     }
 
    .job-list{
-        padding: 0 6.25rem;
+        padding: 2rem 6.25rem;
     } 
 
     .job button{
