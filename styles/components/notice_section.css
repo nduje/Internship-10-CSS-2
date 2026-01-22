@@ -1,0 +1,162 @@
+.notice-board{
+    position: relative;
+    color: white;
+    text-align: center;
+}
+
+
+.notice-board__title{
+    margin-bottom: 5rem;
+    font-size: 2rem;
+}
+
+.notice-board__subtitle{
+    font-size: 1.5rem;
+    color: var(--dump-cyan);
+    margin-bottom: 3rem;
+}
+
+.job-list{
+    display: flex;
+    gap: 40px;
+    padding: 0 1rem;
+    overflow-x: auto;
+    cursor: grab;
+    transition: transform 0.5s ease;
+}
+
+.job{
+    min-width: 464px;
+    height: fit-content;
+    padding: 20px 25px 30px;
+    background: hsla(0,0%,100%,.05);
+    border-radius: 30px;
+}
+
+.job > *{
+    background-color: transparent;
+}
+
+.job .sponsor-logo{
+    background-color: var(--dump-white);
+}
+
+.job div > *{
+    background-color: inherit;
+}
+
+.job__logo{
+    width: 160px;
+    height: 50px;
+    background-position: 0;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.job__logo.ericsson{
+    background-image: url("/assets/images/sponsor_logos/ericsson-logo.svg");
+    filter: invert(1);
+}
+
+.job__logo.infobip{
+    background-image: url("/assets/images/sponsor_logos/infobip-logo-color.svg");
+    transform: scale(0.8) translateX(-15%);
+}
+
+.job__logo.fortuna{
+    background-image: url("/assets/images/sponsor_logos/fortuna-logo.png");
+    filter: invert(0.5) brightness(2);
+}
+
+.job__logo.profico{
+    background-image: url("/assets/images/sponsor_logos/profico-logo.svg");  
+    transform: scale(0.8) translateX(-15%);
+}
+
+.job__logo.bdr{
+    background-image: url("/assets/images/sponsor_logos/bdr-logo.svg");
+    transform: scale(0.8) translateX(-15%);  
+}
+
+
+.job__logo.hrcloud{
+    background-image: url("/assets/images/sponsor_logos/HRC-logo.svg");
+}
+
+.job__logo.typeqast{
+    background-image: url("/assets/images/sponsor_logos/typeqast-logo.svg");
+}
+
+.job__logo.blank{
+    background-image: url("/assets/images/sponsor_logos/blank-logo.png");
+}
+
+.job__title{
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    height: 50px;
+    font-size: 20px;
+    font-weight: 550;
+}
+
+.job__location{
+    display: flex;
+    justify-content: flex-start;
+    gap: .3rem;
+    margin-top: .5rem;
+    margin-bottom: 40px;
+    color: var(--paragraph-transparent);
+}
+
+.job__location img{
+    transform: translate(-10%,-10%);
+    align-self: center;
+}
+
+.job__description{
+    margin-bottom: 2rem;
+    line-height: 20px;
+    text-align: left;
+    color: var(--paragraph-transparent);
+}
+
+.job button{
+    display: block;
+    padding: 10px 2rem;
+    border-radius: 10px;
+    border-color: transparent;
+    font-size: 12px;
+    font-weight: 600;
+    background-color: var(--dump-cyan);
+}
+
+@media (min-width:501px){
+
+    .job{
+        padding: 20px 40px 40px;
+    }
+}
+
+@media (min-width:901px){
+
+    .notice-board__title{
+        font-size: 3rem;
+    }
+
+    .notice-board__subtitle{
+        font-size: 2rem;
+    }
+
+   .job-list{
+        padding: 0 6.25rem;
+    } 
+
+    .job button{
+        font-size: 18px;
+    }    
+
+}    
+
+
+
