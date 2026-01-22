@@ -1,0 +1,134 @@
+.conference-container {
+    color: var(--dump-white);
+}
+
+.conference-container h1 {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 800;
+}
+
+.conference-container h2 {
+    font-size: 24px;
+    line-height: 28px;
+    font-weight: 800;
+}
+
+.conference-container  p {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    opacity: 80%;
+}
+
+.conference-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.conference-overview-container {
+    margin: 1em 0 4em 0;
+    padding: 1.5em;
+}
+
+.conference-image {
+    position: relative;
+    width: 100%;
+    height: 250px;
+}
+
+.conference-image img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 40px;
+    animation: fade 10s infinite;
+}
+
+.conference-image img:nth-child(2) {
+    animation-delay: 5s;
+}
+
+@keyframes fade {
+    0%, 45% { opacity: 1; }
+    50%, 95% { opacity: 0; }
+}
+
+.conference-details-container {
+    gap: 4em;
+    padding: 1.5em;
+}
+
+.conference-details {
+    gap: 2.5em;
+}
+
+.conference-program-image {
+    display: block;
+    width: 100%;
+    height: 392px;
+    object-fit: cover;
+    border-radius: 50px;
+}
+
+.conference-program-container {
+    gap: 2em;
+}
+
+.conference-program {
+    position: relative;
+    margin: 0 0 0 1em;
+    align-items: flex-start;
+
+    opacity: 0;
+
+    animation-name: appear;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+    animation-timeline: view();
+    animation-range: entry 0%;
+}
+
+.conference-program-left {
+    transform: translateX(-100%);
+}
+
+.conference-program-right {
+    transform: translateX(100%);
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.conference-program h2, .conference-program p {
+    z-index: 2;
+    background-color: transparent;
+}
+
+.conference-program-icon {
+    position: absolute;
+    top: -7.5%;
+    left: -7.5%;
+    z-index: 1;
+    width: 40px;
+    height: auto;
+}
+
+.conference-preview-container {
+    padding: 2em;
+    gap: 2.5em;
+}
+
+.conference-preview {
+    padding: 1em;
+}
