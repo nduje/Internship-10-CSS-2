@@ -5,15 +5,17 @@
     text-align: center;
 }
 
+.img-inner{
+    transform: scale(0.9);
+}
+
 .app-info__main-img{
     width: 100%;
-    transform: scale(0.9);
 }
 
 .app-info__perk{
     display: flex;
     flex-direction: column;
-    gap: 3rem;
     width: clamp(280px, 35%, 1200px);
     margin: auto;
 }
@@ -21,6 +23,7 @@
 .app-info__perk-content{
     position: relative;
     z-index:0;
+    margin-top: 3rem;
     background-color: transparent;  
 }
 
@@ -39,10 +42,12 @@
     margin-bottom: .5rem;
     font-size: 1.5rem;
     color: var(--dump-white);
-    text-align: center;
+    text-align: start;
+    line-height: 36px;
 }
 
 .app-info__perk-description{
+    max-width: 280px;
     color: var(--paragraph-transparent);
     line-height: 1.5rem;
     text-align:left;
@@ -65,22 +70,81 @@
 
 @media (min-width:769px){
 
-    .app-info-wrapper{
+    .app-info{
+        max-width: 1444px;        
+        padding: 100px 205px 0 205px;
+        margin: auto;
+    }
+
+    .app-info__title{
+        margin-bottom: 0;
+    }
+
+    .content-wrapper{
         display: flex;
-        padding: 6.25rem 10rem 0 10rem;
         align-items: flex-start;
+        justify-content: space-between;
     }
 
     .app-info__perk{
-        flex: 1;  
+        width: 400px;
         order: -1;
         margin: 0;
+        padding-top: 60px;
     }
 
-    .app-info__main-img{
-        flex: 0 0 70%;
-        margin-left: auto;  
+    .img-wrapper{
+        position: sticky;
+        top: 0px;
+        align-self: flex-start;
+    }
+
+    .img-inner{
+        max-width: 750px;        
+        margin-right: -280px;
+        transform: scale(0.8);
+    }
+
+}
+
+@media (min-width: 1080px){
+
+    .app-info__perk-content{
+        margin-top: 106px;
     }
 }
+
+@media (min-width: 1181px){
+
+    .img-wrapper{
+        position: sticky;
+        top: 0px;
+
+    }
+
+    .img-inner{
+        margin-right: -320px;
+    }
+
+    .app-info__title{
+        font-size: 48px;
+    }
+
+    .app-info__perk-content img{
+        height: 64px;
+        width: 64px;
+        left: -38px;
+        top: -28px;
+    }
+
+    .app-info__perk-title{
+        font-size: 28px;
+        line-height: 38px;
+        text-align: start;
+    }
+}
+
+
+
 
 
