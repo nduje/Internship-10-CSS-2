@@ -7,6 +7,7 @@
 
 .app-info__main-img{
     width: 100%;
+    transform: scale(0.9);
 }
 
 .app-info__perk{
@@ -61,4 +62,25 @@
     font-weight: 600;
     background-color: var(--dump-cyan);
 }
+
+@media (min-width:769px){
+
+    .app-info-wrapper{
+        display: flex;
+        padding: 6.25rem 10rem 0 10rem;
+        align-items: flex-start;
+    }
+
+    .app-info__perk{
+        flex: 1;  
+        order: -1;
+        margin: 0;
+    }
+
+    .app-info__main-img{
+        flex: 0 0 70%;
+        margin-left: auto;  
+    }
+}
+
 
