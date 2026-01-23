@@ -138,6 +138,10 @@
 }
 
 @media (min-width: 1440px) {
+    .conference-container * {
+        z-index: 1;
+    }
+
     .conference-overview-container {
         padding: 0 16rem;
         gap: 1rem;
@@ -337,5 +341,20 @@
         background-color: var(--dump-cyan);
         color: var(--dump-dark);
         border-color: transparent;
+    }
+
+    .abstract-1 {
+        transform: translate(40%, 280%);
+        width: 442px;
+    }
+
+    .abstract-2 {
+        transform: translate(220%, 320%);
+        width: 426px;
+    }
+
+    .abstract-3 {
+        transform: translate(290%, 775%);
+        width: 378px;
     }
 }

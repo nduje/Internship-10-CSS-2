@@ -174,6 +174,10 @@
     max-width: 100%;
 }
 
+.content-tag-desktop {
+    display: none;
+}
+
 .content-title {
     color: var(--dump-white);
     font-size: 16px;
@@ -254,4 +258,102 @@
 
     width: 97px;
     height: auto;
+}
+
+@media (min-width: 1440px) {
+    .schedule-container * {
+        z-index: 1;
+    }
+
+    .day-container:hover {
+        cursor: pointer;
+    }
+
+    .conference-tag-filter-container {
+        justify-content: center;
+        width: fit-content;
+    }
+
+    .conference-tag-filter:hover {
+        cursor: pointer;
+    }
+
+    .conference-content-container {
+        padding: 0 14rem;
+    }
+
+    .conference-content-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 2rem 6rem 2rem 10rem;
+        gap: 1rem;
+    }
+
+    .timetable-and-tag-container {
+        position: absolute;
+        gap: 4em;
+        top: 2.4rem;
+        left: 2rem;
+        width: fit-content;
+        text-wrap: nowrap;
+    }
+
+    .timetable-and-tag-container.blank {
+        top: 2.6rem;
+    }
+
+    .title-and-toggle-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .content-tag-mobile {
+        display: none;
+    }
+
+    .content-tag-desktop {
+        display: flex;
+    }
+
+    .content-tag {
+        font-size: 12px;
+    }
+
+    .content-title {
+        line-height: normal;
+        margin: auto 0;
+        width: fit-content;
+        height: fit-content;
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .content-description {
+        font-size: 16px;
+        line-height: 23px;
+    }
+
+    .lecturer-avatar {
+        width: 56px;
+    }
+
+    .lecturer-container {
+        width: 100%;
+    }
+
+    .lecturer-logo {
+        grid-column: 3;
+        grid-row: 1 / span 2;
+        width: 112px;
+    }
+
+    .abstract-4 {
+        transform: translate(30%, 1760%);
+        width: 252px;
+    }
 }

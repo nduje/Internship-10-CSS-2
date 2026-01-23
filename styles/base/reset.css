@@ -32,3 +32,19 @@ button {
 button:hover {
     opacity: 100%;
 }
+
+.abstract {
+    display: none;
+}
+
+@media (min-width: 1440px) {
+    .abstract {
+        display: flex;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 0;
+        object-fit: cover;
+        height: auto;
+    }
+}
