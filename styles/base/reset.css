@@ -24,3 +24,11 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+button {
+    opacity: 85%;
+}
+
+button:hover {
+    opacity: 100%;
+}

@@ -153,7 +153,7 @@ header::before {
     border-color: var(--dump-white);
 }
 
-.live-now-container {
+.header-live-now-container {
     display: none;
 }
 

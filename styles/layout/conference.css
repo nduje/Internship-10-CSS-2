@@ -1,5 +1,6 @@
 .conference-container {
     color: var(--dump-white);
+    overflow: hidden;
 }
 
 .conference-container h1 {
@@ -78,7 +79,7 @@
 
 .conference-program-container {
     gap: 2em;
-    overflow: hidden;
+    padding: 1em;
 }
 
 .conference-program {
@@ -89,19 +90,17 @@
     opacity: 0;
 
     animation-name: appear;
-    animation-duration: 1s;
+    animation-duration: 2s;
     animation-timing-function: ease-out;
     animation-fill-mode: forwards;
-    animation-timeline: view();
-    animation-range: entry 0%;
 }
 
 .conference-program-left {
-    transform: translateX(-100%);
+    transform: translateX(-100vw);
 }
 
 .conference-program-right {
-    transform: translateX(100%);
+    transform: translateX(100vw);
 }
 
 @keyframes appear {
@@ -132,4 +131,211 @@
 
 .conference-preview {
     padding: 1em;
+}
+
+.conference-live-now-container {
+    display: none;
+}
+
+@media (min-width: 1440px) {
+    .conference-overview-container {
+        padding: 0 16rem;
+        gap: 1rem;
+    }
+
+    .conference-image {
+        width: 760px;
+        height: 480px;
+
+        margin-right: auto;
+        margin-left: 0;
+    }
+
+    .conference-overview-container h1, .conference-overview-container p {
+        margin-right: 0;
+        margin-left: auto;
+        
+        width: 60%;
+    }
+
+    .conference-overview-container h1 {
+        margin-top: 2rem;
+
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .conference-details-container {
+        gap: 8rem;
+        margin-top: 8rem;
+    }
+
+    .conference-details {
+        flex-direction: row;
+        height: 605px;
+        justify-content: center;
+        gap: 12rem;
+    }
+
+    .conference-details-1 {
+        flex-direction: row-reverse;
+    }
+
+    .conference-program-image {
+        width: 505px;
+        height: 605px;
+    }
+
+    .conference-program-container {
+        width: 25%;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        gap: 4rem;
+    }
+    
+    .conference-program-icon {
+        top: -20%;
+        left: 0%;
+
+        width: 64px;
+        height: 64px;
+    }
+
+    .conference-program h2 {
+        font-size: 32px;
+        line-height: 38px;
+
+        margin: 0 2rem;
+    }
+
+    .conference-program p {
+        font-size: 16px;
+        line-height: 24px;
+
+        margin: 0 2rem;
+    }
+
+    .conference-preview-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        grid-template-areas:
+            "preview preview"
+            "left-box right-box";
+
+        gap: 6rem 20rem;
+        padding: 8rem 12rem;
+    }
+
+    .conference-preview {
+        grid-area: preview;
+        margin: 0 1rem;
+
+        align-items: flex-start;
+        width: 50%;
+    }
+
+    .conference-preview h1 {
+        font-size: 48px;
+        line-height: 58px;
+    }
+
+    .conference-preview p {
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    .conference-preview-left { 
+        grid-area: left-box; 
+        transform: translateX(-100vw);
+    }
+
+    .conference-preview-right { 
+        grid-area: right-box;
+        transform: translateX(100vw);
+    }
+
+    .conference-preview-container .conference-program {
+        padding: 0;
+        margin: 0;
+    }
+
+    .conference-live-now-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 2rem;
+        margin: 4rem 14rem;
+        padding: 4rem;
+        border-radius: 40px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .conference-live-now-container * {
+        background-color: transparent;
+    }
+
+    .conference-live-now-image {
+        width: 256px;
+        height: 256px;
+        aspect-ratio: 1 / 1;
+        border-radius: 26px;
+        object-fit: cover;
+        object-position: top;
+    }
+
+    .conference-live-now-infomation-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        height: 256px;
+    }
+
+    .conference-live-now-infomation-container h1 {
+        font-size: 32px;
+        line-height: 38px;
+        font-weight: 600;
+    }
+
+    .conference-live-now-signature {
+        display: flex;
+        flex-direction: row;
+        gap: 4rem;
+        justify-content: space-between;
+        width: 100%;
+        margin: 2rem 0;
+    }
+
+    .conference-lecturer-information .conference-lecturer-name {
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 600;
+    }
+
+    .conference-lecturer-information .conference-lecturer-job {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 400;
+    }
+
+    .conference-live-now-signature hr {
+        margin-left: 8rem;
+        border-color: rgba(255, 255, 255, 0.27);
+    }
+
+    .conference-watch-now-button {
+        cursor: pointer;
+        padding: 12px 32px 12px 32px;
+        border-radius: 15px;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+        background-color: var(--dump-cyan);
+        color: var(--dump-dark);
+        border-color: transparent;
+    }
 }
