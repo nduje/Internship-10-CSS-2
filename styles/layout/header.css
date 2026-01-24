@@ -157,14 +157,14 @@ header::before {
     display: none;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 769px) {
     header::before {
         height: 100%;
         background-image: 
             linear-gradient(to bottom, #0A181BAA 0%, #0A181BFF 100%),
             url("/assets/images/header/6ded6dd0ba4a7a29342c3325bfd2af9a7c099506.png");
     }
-
+    
     .header-typewriter-container {
         position: absolute;
         top: 20%;
@@ -174,7 +174,9 @@ header::before {
     .header-typewriter-container, .header-typewriter-container * {
         background-color: transparent;
     }
+}
 
+@media (min-width: 1340px) {
     .header-typewriter-content {
         font-size: 64px;
     }
