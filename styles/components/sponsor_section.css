@@ -292,6 +292,10 @@
     transform: scaleX(1);
 }
 
+.asbtract_2{
+    position: absolute;
+}
+
 @media(max-width:600px){
 
     .other-sponsors-main-title{
@@ -397,6 +401,54 @@
         display: flex;
         justify-content: center;
         grid-column: 1 / -1;
+    }
+}
+
+@media (min-width: 1440px){
+
+    .sponsor-wrapper{
+        position: relative;
+        background: none;
+    }
+
+    .sponsor-abstract-2{
+        top: 70%;
+        left: 75%;
+        width: 306px;
+        height: 306px;        
+    }
+
+    .sponsor-abstract-4{
+        top: 85%;
+        left: -5%;
+        width: 171px;
+        height: 171px;
+    }
+
+    .sponsor-abstract-5{
+        top: 80%;
+        left: 90%;
+        width: 329px;
+        height: 329px;
+        object-fit: contain;
+    }   
+    
+    .other-sponsors-container{
+        position: relative;
+    }
+
+    .sponsor-abstract-6{
+        top: 38%;
+        left: -12%;
+        width: 204px;
+        height: 204px;
+    }
+
+    .sponsor-abstract-7{
+        top: 57%;
+        left: 95%;
+        width: 216px;
+        height: 216px;
     }
 }
 
