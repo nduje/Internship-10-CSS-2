@@ -20,7 +20,7 @@
     display: flex;
     gap: 40px;
     padding: 2rem 1rem;
-    margin-bottom: 6.25rem;
+    margin-bottom: 140px;
     overflow-x: auto;
     transition: transform 0.5s ease;
 }
@@ -141,11 +141,17 @@
 
 
 @media (min-width:501px){
-
     .job{
         min-width:464px;
         padding: 20px 40px 40px;
     }
+}
+
+@media (min-width:769px){
+    
+   .job-list{
+        padding: 2rem 6.25rem;
+    } 
 }
 
 @media (min-width:901px){
@@ -157,10 +163,6 @@
     .notice-board__subtitle{
         font-size: 2rem;
     }
-
-   .job-list{
-        padding: 2rem 6.25rem;
-    } 
 
     .job button{
         font-size: 18px;

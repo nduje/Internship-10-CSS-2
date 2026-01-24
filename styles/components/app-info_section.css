@@ -1,0 +1,164 @@
+.app-info__title{
+    margin-bottom: 60px;
+    font-size: 2rem;
+    color: var(--dump-white);
+    text-align: center;
+}
+
+.img-inner{
+    transform: scale(0.9);
+}
+
+.app-info__main-img{
+    width: 100%;
+    mask-image: radial-gradient(circle at center, #000 60%, transparent 80%);
+}
+
+.app-info__perk{
+    display: flex;
+    flex-direction: column;
+    width: clamp(280px, 35%, 1200px);
+    margin: auto;
+}
+
+.app-info__perk-content{
+    position: relative;
+    z-index:0;
+    margin-top: 3rem;
+    background-color: transparent;  
+    animation: appear 2s ease-out;
+}
+
+.perk-text {
+    display: flex; 
+    flex-direction: column;
+    align-items: baseline; 
+    background-color: transparent; 
+}
+
+.perk-text > *{
+    background-color: inherit;
+}
+
+.app-info__perk-title{
+    margin-bottom: .5rem;
+    font-size: 1.5rem;
+    color: var(--dump-white);
+    text-align: start;
+    line-height: 36px;
+}
+
+.app-info__perk-description{
+    max-width: 280px;
+    color: var(--paragraph-transparent);
+    line-height: 1.5rem;
+    text-align:left;
+}
+.app-info__perk img{
+    position: absolute;
+    top: -16px;
+    left: -24px;
+    z-index:-1;
+}
+
+.app-info__button{
+    padding: 12px 2rem 10px;
+    border-radius: 10px;
+    border-color: transparent;
+    font-size: 1rem;
+    font-weight: 600;
+    background-color: var(--dump-cyan);
+}
+
+@media (min-width:769px){
+
+    .app-info{
+        max-width: 1444px;        
+        padding: 100px 205px 0 205px;
+        margin: auto;
+    }
+
+    .app-info__title{
+        margin-bottom: 0;
+    }
+
+    .content-wrapper{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .app-info__perk{
+        width: 400px;
+        order: -1;
+        margin: 0;
+        padding-top: 60px;
+    }
+
+    .img-wrapper{
+        position: sticky;
+        top: 0px;
+        align-self: flex-start;
+    }
+
+    .img-inner{
+        max-width: 750px;        
+        margin-right: -280px;
+        transform: scale(0.8);
+    }
+
+}
+
+@media (min-width: 1080px){
+
+    .app-info__perk-content{
+        margin-top: 106px;
+    }
+}
+
+@media (min-width: 1181px){
+
+    .img-wrapper{
+        position: sticky;
+        top: 0px;
+
+    }
+
+    .img-inner{
+        margin-right: -320px;
+    }
+
+    .app-info__title{
+        font-size: 48px;
+    }
+
+    .app-info__perk-content img{
+        height: 64px;
+        width: 64px;
+        left: -38px;
+        top: -28px;
+    }
+
+    .app-info__perk-title{
+        font-size: 28px;
+        line-height: 38px;
+        text-align: start;
+    }
+}
+
+@keyframes appear {
+    from{
+        opacity: 0;
+        transform: translateX(-100vw);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+
+
+
+
