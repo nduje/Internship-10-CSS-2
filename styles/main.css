@@ -5,6 +5,7 @@
 @import "/styles/layout/navigation.css";
 @import "/styles/layout/conference.css";
 @import "/styles/layout/schedule.css";
+@import "/styles/layout/footer.css";
 
 @import "/styles/components/sponsor_section.css";
 @import "/styles/components/notice_section.css";
