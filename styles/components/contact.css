@@ -53,6 +53,8 @@
     gap: 8px;
     padding: 12px 24px;
     border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
 .messenger-button{
@@ -60,10 +62,20 @@
     background-color: #1e88e5;
 }
 
+.messenger-button:hover{
+    background-color: #2795f6;
+    text-decoration: none;
+}
+
 .mail-button{
     width: 185px;
     color: black;
     background-color: var(--dump-cyan);
+}
+
+.mail-button:hover{
+    background-color: #3be1d4;
+    text-decoration: none;
 }
 
 .contact-info__button img{
