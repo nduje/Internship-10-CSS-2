@@ -1,0 +1,128 @@
+.contact-info{
+    position: relative;
+    z-index: 0;
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    padding: 55px 23px 270px 23px;
+}
+
+.contact-info__plane{
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    z-index: -1;
+    width: 400px;
+}
+
+.contact-info__questions,
+.contact-info__button,
+.contact-info__buttons {
+    background: none;
+}
+
+.contact-info__questions{
+    position: relative;
+    z-index: 0;
+    color: white;
+}
+
+.contact-info__main{
+    margin-bottom: 16px;
+    font-size: 48px;
+    background: inherit;
+}
+
+.contact-info__sub{
+    margin-bottom: 48px;
+    color: var(--paragraph-transparent);
+    background: inherit;
+}
+
+.contact-info__buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.contact-info__button > *{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    border-radius: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.messenger-button{
+    color: white;
+    background-color: #1e88e5;
+}
+
+.messenger-button:hover{
+    background-color: #2795f6;
+    text-decoration: none;
+}
+
+.mail-button{
+    width: 185px;
+    color: black;
+    background-color: var(--dump-cyan);
+}
+
+.mail-button:hover{
+    background-color: #3be1d4;
+    text-decoration: none;
+}
+
+.contact-info__button img{
+    width: 24px;
+    height: 24px;
+    background-color: inherit;
+}
+
+.contact-info__button span{
+    font-weight: 600;
+    background-color: inherit;
+    transform: translateY(5%);
+}
+
+@media (min-width: 756px){
+   .contact-info__buttons{
+        flex-direction: row;
+    } 
+
+    .mail-button{
+        width: auto;
+    }
+}
+
+@media (min-width: 900px){
+    .contact-info{
+        padding: 150px 205px 90px 23px;
+    }
+
+    .contact-info__plane{
+        width: auto;
+        bottom: 80px;
+        right: 0;
+    }
+ 
+}
+
+@media (min-width: 1125px){
+    .contact-info{
+        padding-left: 75px;
+    }   
+}
+
+@media (min-width: 1380px){
+    .contact-info{
+        padding-left: 205px;
+    }  
+}
+
+
